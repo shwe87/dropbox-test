@@ -1,0 +1,29 @@
+
+<html>
+<head>
+<script src="https://www.dropbox.com/static/api/dropbox-datastores-1.0-latest.js" type="text/javascript">
+var client = new Dropbox.Client({key:"fnogdk4z85jv266"});
+
+// Try to finish OAuth authorization.
+client.authenticate({interactive: false}, function (error) {
+    if (error) {
+        alert('Authentication error: ' + error);
+        console.log('error');
+    }
+});
+
+if (client.isAuthenticated()) {
+    // Client is authenticated. Display UI.
+    console.log('Hello');
+        alert("Hello!!!!!");
+}
+
+
+</script>
+</head>
+<body>
+
+<button onclick="client.authenticate()">Try it</button>
+</body>
+
+</html>
